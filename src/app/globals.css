@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary */
+  --navy: #1B2A4A;
+  --navy-dark: #0F1A2E;
+  --navy-light: #243656;
+
+  /* Accent */
+  --yellow: #F5C518;
+  --yellow-hover: #FFD740;
+
+  /* Neutrals */
+  --white: #FFFFFF;
+  --gray-100: #F5F5F5;
+  --gray-300: #D1D5DB;
+  --gray-600: #6B7280;
+  --gray-900: #111827;
+
+  /* Semantic */
+  --text-primary: #FFFFFF;
+  --text-dark: #1E2D3B;
+  --text-body: #4B5563;
+  --text-muted: #9CA3AF;
+
+  /* Form */
+  --form-text: #3D5975;
+  --form-border: #D1D5DB;
+  --submit-bg: #3B3A3A;
+  --submit-text: #EDCD1F;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-navy-light: var(--navy-light);
+  --color-yellow: var(--yellow);
+  --color-yellow-hover: var(--yellow-hover);
+  --color-white: var(--white);
+  --color-gray-100: var(--gray-100);
+  --color-gray-300: var(--gray-300);
+  --color-gray-600: var(--gray-600);
+  --color-gray-900: var(--gray-900);
+  --color-text-primary: var(--text-primary);
+  --color-text-dark: var(--text-dark);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-form-text: var(--form-text);
+  --color-form-border: var(--form-border);
+  --color-submit-bg: var(--submit-bg);
+  --color-submit-text: var(--submit-text);
+  --font-heading: var(--font-barlow-condensed);
+  --font-body: var(--font-inter);
+}
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white);
+  color: var(--text-body);
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Scroll animation: glide in from below */
+@keyframes glide-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-glide-in {
+  animation: glide-in 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+}
+
+/* Down arrow bounce */
+@keyframes bounce-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+.animate-bounce-down {
+  animation: bounce-down 2s ease-in-out infinite;
+}
